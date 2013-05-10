@@ -1,9 +1,6 @@
 def prompt
-	print "> "
-end
-
-def please_select
 	puts "Please make a selection."
+	print "> "
 end
 
 def goodbye(why)
@@ -19,7 +16,6 @@ def start
 	puts "1. Encore. I got swag, baby, and I am doing it big!"
 	puts "2. Harrahs. Cheap and on the strip. My $$ is for drinks and tables!"
 	puts "3. Offstrip @ Marriott Residence Inn. Space and cost trump fanciness."
-	please_select
 
 	prompt; hotel = gets.chomp; puts
 
@@ -40,7 +36,6 @@ def encore
 	puts "1. A Show: Tickets to see the Blue Man Group at Mandalay Bay."
 	puts "2. Dinner: For two at The Wicked Spoon Buffet at the Cosmopolitan."
 	puts "3. Spa: A day of pampering at the Wynn."
-	please_select
 
 	prompt; prize = gets.chomp.downcase; puts
 	prize(prize)
@@ -67,7 +62,6 @@ def spa
 	puts "1. I would like to give these claws some human semblance. Mani/Pedi please."
 	puts "2. My muscles are super tight. Spaghetti-fy me with a massage!"
 	puts "3. I have never had a mud bath before. YOLO!"
-	please_select
 
 	prompt; treatment = gets.chomp; puts
 
@@ -92,7 +86,6 @@ def mani_pedi
 	puts "1. Hair done, nails done, errythang did! I am feeling good. Time to dance!"
 	puts "2. I am feeling peckish. Food sounds pretty good."
 	puts "3. I want to explore. Let's hit the downtown scene!"
-	please_select
 
 	prompt; activity = gets.chomp; puts
 
@@ -119,7 +112,6 @@ def massage
 	puts "1. That sounds legen-(WAITFORIT)-dary! Let's go!"
 	puts "2. Magic is not really my scene. Thanks for the invite, but we are clubbing."
 	puts "3. I don't believe in magic. I only believe in the power of burritos. FOOD!"
-	please_select
 
 	prompt; activity = gets.chomp; puts
 
@@ -147,7 +139,6 @@ def walk_strip
 	puts "1. All that walking has got me ready to eat a bear! (I said bear...not beer)."
 	puts "2. The sun has set. That can only mean one thing. CLUBBING!"
 	puts "3. So sleepy. Time for bed!"
-	puts "Please select an option from 1 to 3."
 
 	prompt; activity = gets.chomp; puts
 
@@ -181,7 +172,6 @@ def mud_bath
 	puts "1. I am sooo ready for a \"The Hangover\"-esque night! Party time!"
 	puts "2. Eh, not so into the drunk girls. Time for dinner!"
 	puts "3. Sounds fun, but I really just want to go explore downtown."
-	puts "Please select an option from 1 to 3."
 
 	prompt; activity = gets.chomp; puts
 
@@ -208,7 +198,6 @@ def free_buffet
 	puts "All-you-can-eat, eh? Apparently, you like a challenge."
 	puts "The buffet is open from 5 - 9 for dinner."
 	puts "Would like to eat now or gamble first?"
-	puts "Please select an option."
 
 	prompt; answer = gets.chomp.downcase; puts
 
@@ -229,7 +218,6 @@ def gamble
 	puts "1. Your eyes fall upon the slot machines, and your spirit soars."
 	puts "2. You lock eyes with the black jack dealer, and you know it is on."
 	puts "3. Spin spin spin. Roulette is where it is at, baby!"
-	puts "Please select a number from 1 to 3."
 
 	prompt; gambling = gets.chomp; puts
 
@@ -254,7 +242,6 @@ def slots
 	puts "1. Michael Jackson. This Smooth Criminal has got you feeling like you could win big!"
 	puts "2. Lord of the Rings. One machine to rule them all, right?"
 	puts "3. Classic Diamonds. An oldie, but hopefully, goodie."
-	puts "Please select a number from 1 to 3."
 
 	prompt; slot_machine = gets.chomp; puts
 
@@ -281,7 +268,6 @@ def black_jack
 	puts "You are dealt a \"10\" and a \"4\". The dealer is showing a \"5\"."
 	puts "1. Hit me!"
 	puts "2. Stay!"
-	puts "Please choose option 1 or 2."
 
 	prompt; choice = gets.chomp; puts
 
@@ -289,7 +275,6 @@ def black_jack
 		puts "You are dealt a \"5\". That gives you \"19\". What would you like to do?"
 		puts "1. Stay!"
 		puts "2. Hit!"
-		puts "Please choose option 1 or 2."
 
 		prompt; choice == gets.chomp; puts
 
@@ -319,7 +304,7 @@ def roulette
 	puts "1. Bet on black, cause once you go black..."
 	puts "2. Bet on red, comrade."
 	puts "3. Feeling SUPER lucky. Enter a number from 1 to 36."
-	puts "Please select either red, black or a number from 1 to 36."
+	puts "You enter either red, black or a number from 1 to 36."
 
 	prompt; bet = gets.chomp; puts
 
@@ -331,7 +316,7 @@ def roulette
 		buffet()
 	elsif bet.to_i == 1 + rand(36)
 		puts "You win $200! Lucky sonuva..."
-		puts "You decide to celebate your winnings in burgers, salad and gelate, oh my!"
+		puts "You decide to celebate your winnings in burgers, salad and gelato, oh my!"
 		buffet()
 	else
 		puts "You lose. Sorry 'bout it."
@@ -347,7 +332,6 @@ def buffet
 	puts "1. I will eat like a civilized person and stop when I am full."
 	puts "2. I will eat like a savage and make the buffet regret their decision to let me in."
 	puts "3. I will eat a bit. I just want a small cushion to absorb some alcohol. Team experienced drunk!"
-	puts "Please select a number 1 to 3."
 
 	prompt; eating_choice = gets.chomp; puts
 
@@ -370,7 +354,6 @@ def civilized_eater
 	puts "1. Take your svelte self to da club."
 	puts "2. Continue your health-conscious behavior. Walk the strip."
 	puts "3. This is where eating lightly pays off: POOL TIME!"
-	puts "Please choose a number from 1 to 3."
 
 	prompt; choice = gets.chomp; puts
 
@@ -394,7 +377,6 @@ def team_drunk
 	puts "He offers to take all of you to see Tiesto at XS."
 	puts "1. Awesome! XS is legit and who doesn't love Tiesto?"
 	puts "2. XS is overrated. Thanks for the offer, but we are going somewhere else."
-	puts "Please select option 1 or 2."
 
 	prompt; choice = gets.chomp; puts
 
@@ -414,7 +396,6 @@ def savagery
 	puts "1. Spontaneity is my middle name! Let's go!"
 	puts "2. Sounds fun, but oh so full. Food coma..."
 	puts "3. No thank you. I have to go walk off this food baby! Time to hit the strip."
-	puts "Please select a number from 1 to 3."
 
 	prompt; savage_decision = gets.chomp; puts
 
@@ -445,7 +426,6 @@ def dinner_choice
 	puts "1. Bouchon by Thomas Keller. Pricey, but oh so delicious!"
 	puts "2. Wicked Spoon! Vegas = Buffet for sure. Let's Roll!"
 	puts "3. Somewhere off the strip. I want to get away from the madness."
-	puts "Please choose a number 1 to 3."
 
 	prompt; dinner = gets.chomp.downcase; puts
 
@@ -476,7 +456,6 @@ def fancy_dinner
 	puts "1. Say \"Hell yeah! That sounds awesome!\""
 	puts "2. Say \"No thank you. We were planning on going to see the Blue Man Group.\""
 	puts "3. Say \"Thank you for the offer, but we were going to go clubbing tonight.\""
-	puts "Please choose a number 1 - 3."
 
 	prompt; branson = gets.chomp; puts
 
@@ -496,7 +475,6 @@ def offstrip_dinner
 	puts "We have a few options for you if you want to get away for a bit."
 	puts "1. Lotus of Siam - One of the BEST Thai restaurants in the nation."
 	puts "2. Teppanyaki - Dinner and a (somewhat dirty) show."
-	puts "Please select option 1 or 2."
 
 	prompt; dinner_choice = gets.chomp; puts
 
@@ -518,7 +496,6 @@ def lotus_of_siam
 	puts "1. I want to dance! Just get in a circle, throw all the shoes in the middle and DANCE!"
 	puts "2. I want to explore downtown. I hear it is really booming!"
 	puts "3. I think I just want to walk around a bit and get rid of this Thai food baby."
-	puts "Please select an option 1 to 3."
 
 	prompt; activity = gets.chomp; puts
 
@@ -548,7 +525,6 @@ def teppanyaki
 	puts "He offers to get your entire party into XS at the Wynn to watch Tiesto."
 	puts "1. Go see Tiesto."
 	puts "2. Thank him for the invitation, but decide to go see the Blue Man Group instead."
-	puts "Please choose option 1 or 2."
 
 	prompt; choice = gets.chomp; puts
 
@@ -569,7 +545,6 @@ def see_show()
 	puts "Your friend asks what you want to do next."
 	puts "1. Go to bed. It has been a tiring day. Time for some rest!"
 	puts "2. Time to rage! Let's go clubbing!"
-	puts "Please select 1 or 2."
 
 	prompt; activity = gets.chomp; puts
 
@@ -588,7 +563,6 @@ def clubbing
 	puts "1. Tao at the Venetian."
 	puts "2. The Bank at the Bellagio"
 	puts "3. By clubbing, I meant STRIP clubbing!"
-	puts "Please select a number from 1 - 3."
 
 	prompt; club = gets.chomp; puts
 	club_choice(club)lotus_of_siam
@@ -634,7 +608,7 @@ end
 
 def laundry_room
 	puts "The Laundry Room only fits 20 people at a time. You are asked how many people are in your party."
-	puts "Please enter the amount of people in your party."
+	puts "Enter the amount of people in your party."
 
 	prompt; number = gets.chomp; puts
 
@@ -666,7 +640,6 @@ def pool
 	puts "1. WOOO! BODY SHOTS!"
 	puts "2. Ugh. I raged too hard already. I need a post-daydrinking nap!"
 	puts "3. Uh, no thanks. I don't like licking strangers. Time for dinner."
-	puts "Please select an option 1 to 3."
 
 	prompt; choice = gets.chomp; puts
 
@@ -688,7 +661,6 @@ def body_shots
 	puts "1. Tequila"
 	puts "2. Vodka"
 	puts "3. Kamikaze Shots!"
-	puts "Please select your alcohol!"
 
 	prompt; alcohol = gets.chomp; puts
 
@@ -712,7 +684,6 @@ def tequila
 	puts "1. Uh, it is the Most Interesting Man in the World. I think a resounding \"YES\" is in order."
 	puts "2. Thanks for the offer, but my heart is set on dancing tonight!"
 	puts "3. I would like to, but so much drinking already. I really need to go to bed."
-	puts "Please select an option from 1 to 3."
 
 	prompt; choice = gets.chomp; puts
 
@@ -739,7 +710,6 @@ def vodka
 	puts "1. I am drunk! Let's dance!"
 	puts "2. I need to sober up a bit. Food is probably a good call."
 	puts "3. Whoo! I don't care! Let's just go somewhere! Whoo!"
-	puts "Please select an option 1 to 3."
 
 	prompt; action = gets.chomp; puts
 
@@ -764,7 +734,6 @@ def harrahs
 	puts "1. Dinner!"
 	puts "2. Clubbing!"
 	puts "3. Pool!"
-	puts "Please select an option 1 to 3."
 
 	prompt; action = gets.chomp; puts
 
@@ -786,7 +755,6 @@ def nap
 	puts "1. I feel ready to hit the dance floor!"
 	puts "2. I want to stuff my face. Take me to the meat!"
 	puts "3. Let's go exploring! Downtown sounds great!"
-	puts "Please select an option 1 to 3."
 
 	prompt; action = gets.chomp; puts
 
@@ -803,20 +771,26 @@ def nap
 end
 
 def marriott
-	puts "Sorry! The Marriott is closed. Please make another selection."
-	puts "1. Encore"
-	puts "2. Harrahs"
+	puts "Cool! The Residence Inn is a about a mile off the strip, but you get free breakfast!"
+	puts "You settle into the hotel and take a couple of shots. Time to VEGAS!"
+	puts "What would you like to do next?"
+	puts "1. The sun is out. I think it is time to party aquatic-style!"
+	puts "2. The hunger. It moves me."
+	puts "3. Let's see the sights! Drinking and exploring sound great!"
 
-	prompt; hotel = gets.chomp; puts
+	prompt; action = gets.chomp; puts
 
-	if hotel == "1"
-		encore()
-	elsif hotel == "2"
-		harrahs()
+	if action == "1" 
+		pool()
+	elsif action == "2"
+		dinner_choice
+	elsif action == "3"
+		downtown()
 	else
-		puts "I don't know what that means. I am going to place you at Harrahs."
-		harrahs()
-	end	
+		puts "Slow down, tiger! You have only been here for 45 minutes, and already you are incoherent."
+		puts "How about we just get a little food in you?"
+		dinner_choice()
+	end				
 end
 
 start()
