@@ -765,7 +765,7 @@ def nap
 	elsif action == "3"
 		downtown()
 	else
-		puts "You seem to lack the coordination to enter a number. Maybe some food will help?"
+		puts "You seem to lack the coordination to esnter a number. Maybe some food will help?"
 		dinner_choice()
 	end		
 end
